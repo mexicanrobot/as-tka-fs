@@ -6,8 +6,6 @@ function RotationGraph(props) {
     let hours = new Array(24);
     hours.fill(false);
 
-    console.log(hours);
-
     for(let hour=0; hour < hours.length; hour++) {
         let startTime = (hour + 1) * 3600;
 
@@ -15,8 +13,6 @@ function RotationGraph(props) {
             return rotationFlight.flight.departuretime <= startTime && rotationFlight.flight.arrivaltime >= startTime;
         });
     }
-
-    console.log(hours);
 
     return (
         <div className="hours-container">

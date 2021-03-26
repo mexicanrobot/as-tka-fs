@@ -6,9 +6,6 @@ import Rotation from './Rotation';
 import Aircrafts from './Aircrafts';
 import Header from './Header';
 
-import aircraftData from '../data/aircrafts.json';
-import flightsData from '../data/flights.json';
-
 function App() {
   const [aircrafts,setAircrafts] = useState([]);
   const [flights,setFlights] = useState([]);
@@ -16,17 +13,22 @@ function App() {
   const [rotation,setRotation] = useState([]);
 
   useEffect(() => {
-    for(let aircraft of aircraftData) {
-      aircraft.percentage = Number(0).toFixed(2);
-    }
+    fetch('https://infinite-dawn-93085.herokuapp.com/aircrafts').then(res => res.json())
+    .then(aircrafts => {
+      setCurrentAircraft(aircrafts.data[0]);
+      for(let aircraft of aircrafts.data) {
+        aircraft.percentage = Number(0).toFixed(2);
+      }
+      setAircrafts(aircrafts.data);
+    });
 
-    for(let flight of flights) {
-      flight.selected = false;
-    }
-
-    setAircrafts(aircraftData);
-    setFlights(flightsData);
-    setCurrentAircraft(aircraftData[0]);
+    fetch('https://infinite-dawn-93085.herokuapp.com/flights').then(res => res.json())
+    .then(flights => {
+      for(let flight of flights.data) {
+        flight.selected = false;
+      }
+      setFlights(flights.data);
+    });
   },[]);
 
   return (

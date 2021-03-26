@@ -20,8 +20,8 @@ function Rotation(props) {
       <div className="rotationFlights">
         {
           rotation.map(flight => (
-            <div className="rotationFlight" key={flight.flight.ident + flight.flight.destination + flight.flight.arrivaltime}>
-              <div>Flight: {flight.flight.ident}</div>
+            <div className="rotationFlight" key={flight.flight.id + flight.flight.destination + flight.flight.arrivaltime}>
+              <div>Flight: {flight.flight.id}</div>
               <div className="from-to">
                 <div>From: {flight.flight.origin} {flight.flight.readable_departure}</div>
                 <div>To: {flight.flight.destination} {flight.flight.readable_arrival}</div>

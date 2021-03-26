@@ -11,8 +11,8 @@ function Flight(props) {
         <div 
             onClick={() => updateRotation(rotation, currentAircraft, flight, setRotation)}
             className={`flight ${flight.selected ? "selected" : ""}`}
-            key={flight.ident}>
-            <div>Flight: {flight.ident}</div>
+            key={flight.id}>
+            <div>Flight: {flight.id}</div>
             <div className="from-to">
                 <div>Departure:{flight.origin} {flight.readable_departure}</div>
                 <div>Arrival: {flight.destination} {flight.readable_arrival}</div>

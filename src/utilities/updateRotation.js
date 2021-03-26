@@ -3,7 +3,7 @@ function updateRotation(rotation, currentAircraft, flight, setRotation) {
     if(!currentAircraft.ident) return;
 
     //Flight already selected
-    if(rotation.some(value => value.flight.ident === flight.ident)) return;
+    if(rotation.some(value => value.flight.id === flight.id)) return;
     
     //Current airport empty if no flights yet
     let currentAirport = null;
