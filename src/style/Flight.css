@@ -1,0 +1,31 @@
+.flight{
+    text-align: center;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 5px;
+    align-self: center;
+    width: 80%;
+    padding: 5px;
+}
+  
+.flight:first-of-type {
+    border-color: black;
+}
+
+.flight:hover {
+    background-color: bisque;
+}
+
+.flight:active {
+    background-color:brown;
+}
+
+.selected {
+    background-color: rgb(112, 216, 112);
+}
+
+.from-to {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

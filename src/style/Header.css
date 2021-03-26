@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    padding: 5px;
+    margin: 5px;
+    background-color: #f3f3f3;
+}
+  
+.column-headers{
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0px 5px 0px;
+}
+
+.column-headers div {
+    flex: 1;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.date {
+    font-weight: bold;
+}

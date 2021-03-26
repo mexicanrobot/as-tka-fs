@@ -1,0 +1,31 @@
+.hours-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hours {
+    flex: 1;
+    display: flex;
+    height: 25px;
+}
+
+.occupation {
+    flex: 1;
+    display: flex;
+    height: 25px;
+}
+
+.hour {
+    flex: 1;
+    font-size: 8px;
+    height: 25px;
+}
+
+.occupied {
+    background-color: rgb(112, 216, 112);
+}
+
+.not-occupied {
+    background-color: rgb(247, 131, 131);
+}
